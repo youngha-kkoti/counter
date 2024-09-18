@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Viewer from "./component/Viewer";
 import Controller from "./component/Controller";
 
@@ -8,6 +8,10 @@ function App() {
   const handleSetCount = (value) => {
     setCount(count + value);
   };
+
+  useEffect(() => {
+    console.log("count update:", count);
+  }, [count]);
 
   return (
     <div className="App">
