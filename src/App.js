@@ -25,6 +25,10 @@ function App() {
     }
   });
 
+  useEffect(() => {
+    console.log("component mount");
+  }, []); // Passing an empty array to useEffect will execute the callback function only at the component's mount time.
+
   return (
     <div className="App">
       <h1>Simple Counter</h1>
