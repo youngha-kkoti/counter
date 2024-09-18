@@ -17,29 +17,29 @@ function App() {
 
   const didMountRef = useRef(false);
 
-  useEffect(() => {
-    if (!didMountRef.current) {
-      didMountRef.current = true;
-      return;
-    } else {
-      console.log("component update!");
-    }
-  });
+  // useEffect(() => {
+  //   if (!didMountRef.current) {
+  //     didMountRef.current = true;
+  //     return;
+  //   } else {
+  //     console.log("component update!");
+  //   }
+  // });
 
-  useEffect(() => {
-    console.log("component mount");
-  }, []); // Passing an empty array to useEffect will execute the callback function only at the component's mount time.
+  // useEffect(() => {
+  //   console.log("component mount");
+  // }, []); // Passing an empty array to useEffect will execute the callback function only at the component's mount time.
 
-  useEffect(() => {
-    const intervalID = setInterval(() => {
-      console.log("깜빡");
-    }, 1000);
+  // useEffect(() => {
+  //   const intervalID = setInterval(() => {
+  //     console.log("깜빡");
+  //   }, 1000);
 
-    return () => {
-      console.log("cleanup");
-      clearInterval(intervalID);
-    };
-  });
+  //   return () => {
+  //     console.log("cleanup");
+  //     clearInterval(intervalID);
+  //   };
+  // });
 
   return (
     <div className="App">
