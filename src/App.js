@@ -1,8 +1,7 @@
 import "./App.css";
-import { useRef, useEffect, useState } from "react";
+import { useRef, useState } from "react";
 import Viewer from "./component/Viewer";
 import Controller from "./component/Controller";
-import { cleanup } from "@testing-library/react";
 
 function App() {
   const [count, setCount] = useState(0);
