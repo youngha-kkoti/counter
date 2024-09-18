@@ -1,11 +1,12 @@
 import "./App.css";
-import { useState, useEffect } from "react";
+import { useEffect, useState, useState } from "react";
 import Viewer from "./component/Viewer";
 import Controller from "./component/Controller";
 
 function App() {
   const [count, setCount] = useState(0);
   const [text, setText] = useState("");
+
   const handleSetCount = (value) => {
     setCount(count + value);
   };
@@ -13,9 +14,16 @@ function App() {
     setText(e.target.value);
   };
 
+  const didMountRef = useRef(false);
+
   useEffect(() => {
-    console.log("update:", text, count);
-  }, [text, count]);
+    if (!didMountRef.current) {
+      didMountRef.current = true;
+      return;
+    } else {
+      console.log("component update!");
+    }
+  });
 
   return (
     <div className="App">
