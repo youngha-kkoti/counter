@@ -1,5 +1,5 @@
 import "./App.css";
-import { useEffect, useState, useState } from "react";
+import { useRef, useEffect, useState } from "react";
 import Viewer from "./component/Viewer";
 import Controller from "./component/Controller";
 
