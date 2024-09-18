@@ -1,5 +1,5 @@
 import "./App.css";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import Viewer from "./component/Viewer";
 import Controller from "./component/Controller";
 import Even from "./component/Even";
@@ -15,7 +15,7 @@ function App() {
     setText(e.target.value);
   };
 
-  const didMountRef = useRef(false);
+  // const didMountRef = useRef(false);
 
   // useEffect(() => {
   //   if (!didMountRef.current) {
